@@ -1,5 +1,5 @@
-#include "Headers/Resources.h"
-#include "Headers/MathFunc.h"
+#include "HeadersVariables/Resources.h"
+#include "HeadersVariables/MathFunc.h"
 
 int main()
 {
