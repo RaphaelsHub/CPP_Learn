@@ -156,6 +156,11 @@
   <ItemGroup>
     <ClCompile Include="Pointers.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Header_Pointer\Func.h" />
+    <ClInclude Include="Header_Pointer\SmartPointer.h" />
+    <ClInclude Include="Header_Pointer\Var.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
