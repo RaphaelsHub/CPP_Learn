@@ -22,6 +22,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SortAlg", "SortAlg\SortAlg.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Intro_Classes", "Intro_Classes\Intro_Classes.vcxproj", "{E8B6B687-271F-4731-874C-B57AF69143F6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Files", "Files\Files.vcxproj", "{D0CBDA02-B815-43E5-BF1A-2C646F6CC72E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -118,5 +120,13 @@ Global
 		{E8B6B687-271F-4731-874C-B57AF69143F6}.Release|Win32.Build.0 = Release|Win32
 		{E8B6B687-271F-4731-874C-B57AF69143F6}.Release|x64.ActiveCfg = Release|x64
 		{E8B6B687-271F-4731-874C-B57AF69143F6}.Release|x64.Build.0 = Release|x64
+		{D0CBDA02-B815-43E5-BF1A-2C646F6CC72E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D0CBDA02-B815-43E5-BF1A-2C646F6CC72E}.Debug|Win32.Build.0 = Debug|Win32
+		{D0CBDA02-B815-43E5-BF1A-2C646F6CC72E}.Debug|x64.ActiveCfg = Debug|x64
+		{D0CBDA02-B815-43E5-BF1A-2C646F6CC72E}.Debug|x64.Build.0 = Debug|x64
+		{D0CBDA02-B815-43E5-BF1A-2C646F6CC72E}.Release|Win32.ActiveCfg = Release|Win32
+		{D0CBDA02-B815-43E5-BF1A-2C646F6CC72E}.Release|Win32.Build.0 = Release|Win32
+		{D0CBDA02-B815-43E5-BF1A-2C646F6CC72E}.Release|x64.ActiveCfg = Release|x64
+		{D0CBDA02-B815-43E5-BF1A-2C646F6CC72E}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 EndGlobal
