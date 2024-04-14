@@ -4,6 +4,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Intro_Variables", "Intro_Va
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Intro_Conditions", "Intro_Conditions\Intro_Conditions.vcxproj", "{85C3FAA7-5017-4CA4-9AE0-F1CDD865C2BF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Intro_Loops", "Intro_Loops\Intro_Loops.vcxproj", "{4A92124D-7F49-49E0-8037-A4E38C80F5E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -28,5 +30,13 @@ Global
 		{85C3FAA7-5017-4CA4-9AE0-F1CDD865C2BF}.Release|Win32.Build.0 = Release|Win32
 		{85C3FAA7-5017-4CA4-9AE0-F1CDD865C2BF}.Release|x64.ActiveCfg = Release|x64
 		{85C3FAA7-5017-4CA4-9AE0-F1CDD865C2BF}.Release|x64.Build.0 = Release|x64
+		{4A92124D-7F49-49E0-8037-A4E38C80F5E7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4A92124D-7F49-49E0-8037-A4E38C80F5E7}.Debug|Win32.Build.0 = Debug|Win32
+		{4A92124D-7F49-49E0-8037-A4E38C80F5E7}.Debug|x64.ActiveCfg = Debug|x64
+		{4A92124D-7F49-49E0-8037-A4E38C80F5E7}.Debug|x64.Build.0 = Debug|x64
+		{4A92124D-7F49-49E0-8037-A4E38C80F5E7}.Release|Win32.ActiveCfg = Release|Win32
+		{4A92124D-7F49-49E0-8037-A4E38C80F5E7}.Release|Win32.Build.0 = Release|Win32
+		{4A92124D-7F49-49E0-8037-A4E38C80F5E7}.Release|x64.ActiveCfg = Release|x64
+		{4A92124D-7F49-49E0-8037-A4E38C80F5E7}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 EndGlobal
