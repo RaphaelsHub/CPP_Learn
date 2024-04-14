@@ -18,9 +18,6 @@ private:
     int countGreenApples = 0;
 
 public:
-    gig() = default;
-    ~gig() = default;
-
     void operator()(Color color)
     {
         if (color == green)
@@ -37,6 +34,6 @@ void ShowFuct()
     gig A;
     Color array[] = {red, green, green, green, green, red};
 
-    for (auto elem : array)
+    for (const auto elem : array)
         A(elem);
 }

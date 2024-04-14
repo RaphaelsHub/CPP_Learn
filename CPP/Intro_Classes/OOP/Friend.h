@@ -10,7 +10,7 @@ public:
     Buyer() = default;
     ~Buyer() = default;
 
-    void BuyBeer(Beer &typeOfBeer);
+    static void BuyBeer(Beer &typeOfBeer);
 };
 
 class Beer

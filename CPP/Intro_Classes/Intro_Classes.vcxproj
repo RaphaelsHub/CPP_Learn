@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{C90FA723-6C5A-4127-B312-227D78BC693C}</ProjectGuid>
+    <ProjectGuid>{E8B6B687-271F-4731-874C-B57AF69143F6}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Classes</RootNamespace>
+    <RootNamespace>Intro_Classes</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -154,20 +154,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Classes.cpp" />
+    <ClCompile Include="Intro_Classes.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="friends.h" />
-    <ClInclude Include="Functors.h" />
-    <ClInclude Include="MarkConstChangibleVars.h" />
-    <ClInclude Include="Polimorf.h" />
-    <ClInclude Include="Predicats.h" />
-    <ClInclude Include="SetOfVarsProtection.h" />
-    <ClInclude Include="NameSpace.h" />
-    <ClInclude Include="Template.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Sample.h" />
+    <ClInclude Include="OOP\ConstMethod.h" />
+    <ClInclude Include="OOP\Friend.h" />
+    <ClInclude Include="OOP\Functors.h" />
+    <ClInclude Include="OOP\InseartedClass.h" />
+    <ClInclude Include="OOP\Interface.h" />
+    <ClInclude Include="OOP\Lib.h" />
+    <ClInclude Include="OOP\NameSpace.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
