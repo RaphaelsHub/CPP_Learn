@@ -14,6 +14,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Functions", "Functions\Func
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pointers", "Pointers\Pointers.vcxproj", "{98F9ACFB-4AC6-4981-9607-B3D58E0E4B3D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Array", "Array\Array.vcxproj", "{AA532C82-A783-427C-941E-18A2D06C0AF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -78,5 +80,13 @@ Global
 		{98F9ACFB-4AC6-4981-9607-B3D58E0E4B3D}.Release|Win32.Build.0 = Release|Win32
 		{98F9ACFB-4AC6-4981-9607-B3D58E0E4B3D}.Release|x64.ActiveCfg = Release|x64
 		{98F9ACFB-4AC6-4981-9607-B3D58E0E4B3D}.Release|x64.Build.0 = Release|x64
+		{AA532C82-A783-427C-941E-18A2D06C0AF3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AA532C82-A783-427C-941E-18A2D06C0AF3}.Debug|Win32.Build.0 = Debug|Win32
+		{AA532C82-A783-427C-941E-18A2D06C0AF3}.Debug|x64.ActiveCfg = Debug|x64
+		{AA532C82-A783-427C-941E-18A2D06C0AF3}.Debug|x64.Build.0 = Debug|x64
+		{AA532C82-A783-427C-941E-18A2D06C0AF3}.Release|Win32.ActiveCfg = Release|Win32
+		{AA532C82-A783-427C-941E-18A2D06C0AF3}.Release|Win32.Build.0 = Release|Win32
+		{AA532C82-A783-427C-941E-18A2D06C0AF3}.Release|x64.ActiveCfg = Release|x64
+		{AA532C82-A783-427C-941E-18A2D06C0AF3}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 EndGlobal
