@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{EEB98ED2-1915-4476-8B66-21061388635F}</ProjectGuid>
+    <ProjectGuid>{3BF79A09-6F36-46C9-B150-CF3F09A431E3}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>SortAlg</RootNamespace>
+    <RootNamespace>SearchWay</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -154,19 +154,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="SortAlg.cpp" />
+    <ClCompile Include="SearchWay.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SortingAlgorithms\1.MergeSort.h" />
-    <ClInclude Include="SortingAlgorithms\2.HeapSort.h" />
-    <ClInclude Include="SortingAlgorithms\4.InsertionSort.h" />
-    <ClInclude Include="SortingAlgorithms\5.SelectionSort.h" />
-    <ClInclude Include="SortingAlgorithms\6.CountingSort.h" />
-    <ClInclude Include="SortingAlgorithms\7.TreeSort.h" />
-    <ClInclude Include="SortingAlgorithms\8.QuickSort.h" />
+    <ClInclude Include="Algorithms\1.Dijikstra.h" />
+    <ClInclude Include="Algorithms\3.Dfs.h" />
+    <ClInclude Include="Algorithms\4.A_Star.h" />
+    <ClInclude Include="Algorithms\5.Prima.h" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SortingAlgorithms\3.BoobleSort.h" />
+    <Content Include="Algorithms\2.Bfs.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

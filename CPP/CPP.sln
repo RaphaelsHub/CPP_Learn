@@ -24,6 +24,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Intro_Classes", "Intro_Clas
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Files", "Files\Files.vcxproj", "{D0CBDA02-B815-43E5-BF1A-2C646F6CC72E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SearchWay", "SearchWay\SearchWay.vcxproj", "{3BF79A09-6F36-46C9-B150-CF3F09A431E3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataStructs", "DataStructs\DataStructs.vcxproj", "{2FF831BC-EF63-4CE6-A539-B279662B5BC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -128,5 +132,21 @@ Global
 		{D0CBDA02-B815-43E5-BF1A-2C646F6CC72E}.Release|Win32.Build.0 = Release|Win32
 		{D0CBDA02-B815-43E5-BF1A-2C646F6CC72E}.Release|x64.ActiveCfg = Release|x64
 		{D0CBDA02-B815-43E5-BF1A-2C646F6CC72E}.Release|x64.Build.0 = Release|x64
+		{3BF79A09-6F36-46C9-B150-CF3F09A431E3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3BF79A09-6F36-46C9-B150-CF3F09A431E3}.Debug|Win32.Build.0 = Debug|Win32
+		{3BF79A09-6F36-46C9-B150-CF3F09A431E3}.Debug|x64.ActiveCfg = Debug|x64
+		{3BF79A09-6F36-46C9-B150-CF3F09A431E3}.Debug|x64.Build.0 = Debug|x64
+		{3BF79A09-6F36-46C9-B150-CF3F09A431E3}.Release|Win32.ActiveCfg = Release|Win32
+		{3BF79A09-6F36-46C9-B150-CF3F09A431E3}.Release|Win32.Build.0 = Release|Win32
+		{3BF79A09-6F36-46C9-B150-CF3F09A431E3}.Release|x64.ActiveCfg = Release|x64
+		{3BF79A09-6F36-46C9-B150-CF3F09A431E3}.Release|x64.Build.0 = Release|x64
+		{2FF831BC-EF63-4CE6-A539-B279662B5BC0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2FF831BC-EF63-4CE6-A539-B279662B5BC0}.Debug|Win32.Build.0 = Debug|Win32
+		{2FF831BC-EF63-4CE6-A539-B279662B5BC0}.Debug|x64.ActiveCfg = Debug|x64
+		{2FF831BC-EF63-4CE6-A539-B279662B5BC0}.Debug|x64.Build.0 = Debug|x64
+		{2FF831BC-EF63-4CE6-A539-B279662B5BC0}.Release|Win32.ActiveCfg = Release|Win32
+		{2FF831BC-EF63-4CE6-A539-B279662B5BC0}.Release|Win32.Build.0 = Release|Win32
+		{2FF831BC-EF63-4CE6-A539-B279662B5BC0}.Release|x64.ActiveCfg = Release|x64
+		{2FF831BC-EF63-4CE6-A539-B279662B5BC0}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 EndGlobal
