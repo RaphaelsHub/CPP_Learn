@@ -1,8 +1,8 @@
 #pragma once
 
 #include <iterator>
-#define MY_DATA template <typename T>
 
+#define MY_DATA template <typename T>
 
 MY_DATA
 class IteratorArr
@@ -62,22 +62,22 @@ public:
 };
 
 MY_DATA
-class rIterator : public IteratorArr<T>
+class rIteratorArr : public IteratorArr<T>
 {
 public:
-    rIterator(): IteratorArr<T>::data(nullptr)
+    rIteratorArr(): IteratorArr<T>::data(nullptr)
     {
     }
-    rIterator(const T* ptr) : IteratorArr<T>::data(const_cast<T*>(ptr))
+    rIteratorArr(const T* ptr) : IteratorArr<T>::data(const_cast<T*>(ptr))
     {
     }
 
-    rIterator<T> operator++()
+    rIteratorArr<T> operator++()
     {
         IteratorArr<T>::data = this->data++;
         return *this;
     }
-    rIterator<T> &operator++(T)
+    rIteratorArr<T> &operator++(T)
     {
         rIterator tmp = *this;
         IteratorArr<T>::data = this->data++;

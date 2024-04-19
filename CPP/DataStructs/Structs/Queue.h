@@ -1,133 +1,43 @@
 #pragma once
 
-#include <sstream>
 #include <assert.h>
+#include <sstream>
 #include <string.h>
-#define TAMPLATE_POINTER_NODE template <typename T> using pointerNode = Node<T> *
-#define TEMPLATE_REFERENCE_NODE (template <typename T> using referenceNode = Node<T> &)
-#define TEMPLATE_T template <typename T>
 
-
-
-// DateStruct List
-TEMPLATE_T struct Node
-{
-    T data;
-    Node *next;
-    Node *prev;
-    Node(const T &value) : data(value), next(nullptr), prev(nullptr) {}
-};
-
-// Iterator realization
-TEMPLATE_T 
-class Iterator
-{
-protected:
-    using pointerNode = Node<T> *;
-    using referenceNode = Node<T> &;
-    pointerNode _ptr;
-
-public:
-    // Using
-    using iterator_category = std::bidirectional_iterator_tag;
-    using value_type = T;
-    using difference_type = std::ptrdiff_t; // size_t
-    using pointer = T *;
-    using reference = T &;
-
-    // Constructors
-    Iterator() : _ptr(nullptr) {}
-    Iterator(const pointerNode ptr) : _ptr(ptr) {}
-    Iterator(referenceNode cur) : _ptr(cur) {}
-
-    // Destructors
-    ~Iterator() = default;
-
-    // Operators
-    Iterator &operator++()
-    {
-        _ptr = _ptr->next;
-        return *this;
-    }
-    Iterator operator++(int)
-    {
-        Iterator tmp = *this;
-        _ptr = _ptr->next;
-        return tmp;
-    }
-    Iterator &operator--()
-    {
-        _ptr = _ptr->prev;
-        return *this;
-    }
-    Iterator operator--(int)
-    {
-        Iterator tmp = *this;
-        _ptr = _ptr->prev;
-        return tmp;
-    }
-    reference operator*() { return _ptr->data; }
-    pointer operator->() { return &(_ptr->data); }
-
-    // Boolean Operators
-    friend bool operator==(const Iterator &a, const Iterator &b) { return a._ptr == b._ptr; }
-    friend bool operator!=(const Iterator &a, const Iterator &b) { return a._ptr != b._ptr; }
-};
-
-// rIterator realization
-TEMPLATE_T class rIterator : public Iterator<T>
-{
-public:
-    //using
-    using pointerNode = Node<T> *;
-    using referenceNode = Node<T> &;
-    // Constructors
-    rIterator() : Iterator<T>::_ptr(nullptr) {}
-    rIterator(const pointerNode ptr) : Iterator<T>::Iterator(ptr) {}
-
-    // Operators
-    rIterator<T> &operator++()
-    {
-        Iterator<T>::_ptr = this->_ptr->prev;
-        return *this;
-    }
-    rIterator<T> operator++(int)
-    {
-        rIterator _tmp = *this;
-        Iterator<T>::_ptr = this->_ptr->prev;
-        return _tmp;
-    }
-};
+#include "IteratrorRiterator.h"
 
 // abstract class
-TEMPLATE_T class abstract_data_t
+TEMPLATE_T
+class abstract_data_t
 {
 public:
     virtual ~abstract_data_t() = 0;
-    virtual T &Front() = 0;
-    virtual T &Back() = 0;
-    virtual void Push_back(const T &a) = 0;
+    virtual T& Front() = 0;
+    virtual T& Back() = 0;
+    virtual void Push_back(const T& a) = 0;
     virtual T Pop_front() = 0;
     virtual T Pop_back() = 0;
-    virtual void Extend(const abstract_data_t<T> &a) = 0;
+    virtual void Extend(const abstract_data_t<T>& a) = 0;
     virtual size_t Length() const = 0;
     virtual bool Empty() = 0;
     virtual Iterator<T> begin() const = 0;
     virtual Iterator<T> end() const = 0;
     virtual void Clear() = 0;
-    virtual Iterator<T> Find(const T &elem) = 0;
-    virtual Iterator<T> Insert(Iterator<T>, const T &elem) = 0;
+    virtual Iterator<T> Find(const T& elem) = 0;
+    virtual Iterator<T> Insert(Iterator<T>, const T& elem) = 0;
     virtual Iterator<T> Erase(Iterator<T> iter) = 0;
-    virtual void Assign(std::initializer_list<T> &a) = 0;
+    virtual void Assign(std::initializer_list<T>& a) = 0;
 
-    virtual T &operator[](size_t index) = 0;
-    abstract_data_t<T> &operator=(const abstract_data_t<T> &list)
+    virtual T& operator[](size_t index) = 0;
+
+    abstract_data_t<T>& operator=(const abstract_data_t<T>& list)
     {
         Clear();
         Extend(list);
         return *this;
     }
-    friend bool operator==(abstract_data_t<T> &l, abstract_data_t<T> &r)
+
+    friend bool operator==(abstract_data_t<T>& l, abstract_data_t<T>& r)
     {
         if (l.Length() != r.Length())
             return false;
@@ -143,42 +53,51 @@ public:
         return true;
     }
 };
-TEMPLATE_T inline abstract_data_t<T>::~abstract_data_t() {}
 
-TEMPLATE_T class List : public abstract_data_t<T>
+TEMPLATE_T
+inline abstract_data_t<T>::~abstract_data_t()
+{
+}
+
+TEMPLATE_T
+class List : public abstract_data_t<T>
 {
 private:
-    using pointerNode = Node<T> *;
-    using referenceNode = Node<T> &;
-    using Iter =  Iterator<T>;
-    using rIter =  rIterator<T>;
+    using pointerNode = Node<T>*;
+    using referenceNode = Node<T>&;
+    using Iter = Iterator<T>;
+    using rIter = rIterator<T>;
 
     pointerNode head = nullptr;
     pointerNode tail = nullptr;
     size_t size = 0;
 
     template <typename InputIterator>
-    void InitializeQueue(const InputIterator &begin,const InputIterator &end)
+    void InitializeQueue(const InputIterator& begin, const InputIterator& end)
     {
         for (auto it = begin; it != end; ++it)
             Push_back(*it);
     }
+
 public:
     // Constructors
     List() = default;
+
     List(size_t size) : List()
     {
         for (size_t i = 0; i < size; ++i)
             List<T>::Push_back(T());
     }
+
     List(const T a[], const size_t _size) : List()
     {
         for (size_t i = 0; i < _size; ++i)
             List<T>::Push_back(a[i]);
     }
-    List(const List<T> &b) : List() { InitializeQueue(b.begin(), b.end()); }
-    List(const Iter &begin, const Iter &end) : List() { InitializeQueue(begin, end); }
-    List(const rIter &begin, const rIter &end) : List() { InitializeQueue(begin, end); }
+
+    List(const List<T>& b) : List() { InitializeQueue(b.begin(), b.end()); }
+    List(const Iter& begin, const Iter& end) : List() { InitializeQueue(begin, end); }
+    List(const rIter& begin, const rIter& end) : List() { InitializeQueue(begin, end); }
     List(std::initializer_list<T> a) : List() { InitializeQueue(a.begin(), a.end()); }
 
     // Destructors
@@ -191,7 +110,7 @@ public:
     rIter rend() const { return rIter(nullptr); }
 
     // Basic List Functions
-    void Push_back(const T &a) override
+    void Push_back(const T& a) override
     {
         auto newNode = new Node<T>(a);
         if (!size)
@@ -204,6 +123,7 @@ public:
         }
         ++size;
     }
+
     T Pop_front() override
     {
         if (head == nullptr)
@@ -223,7 +143,7 @@ public:
         return tmpData;
     }
 
-    void Push_front(const T &a)
+    void Push_front(const T& a)
     {
         auto newNode = new Node<T>(a);
 
@@ -238,6 +158,7 @@ public:
 
         ++size;
     }
+
     T Pop_back() override
     {
         if (tail == nullptr)
@@ -253,14 +174,16 @@ public:
 
         return tmpData;
     }
-    T &Front() override { return head->data;}
-    T &Back() override { return tail->data; }
-    const T &Front() const { return head->data; }
-    const T &Back() const { return tail->data; }
+
+    T& Front() override { return head->data; }
+    T& Back() override { return tail->data; }
+    const T& Front() const { return head->data; }
+    const T& Back() const { return tail->data; }
     size_t Length() const override { return size; }
     bool Empty() override { return (size == 0); }
-    void Copy_From(const List<T> &other) { InitializeQueue(other.begin(), other.end()); }
-    void Swap(List<T> &b)
+    void Copy_From(const List<T>& other) { InitializeQueue(other.begin(), other.end()); }
+
+    void Swap(List<T>& b)
     {
         std::swap(head, b.head);
         std::swap(tail, b.tail);
@@ -273,7 +196,7 @@ public:
             size < Size ? Push_back(0) : Pop_back();
     }
 
-    bool Contains(const T &a)
+    bool Contains(const T& a)
     {
         for (auto it : *this)
             if (it == a)
@@ -281,7 +204,7 @@ public:
         return false;
     }
 
-    size_t CountRp(const T &a)
+    size_t CountRp(const T& a)
     {
         size_t count = 0;
         for (auto it = this->begin(); it != this->end(); ++it)
@@ -301,31 +224,36 @@ public:
 
         return tmp->data;
     }
-    void Extend(const abstract_data_t<T> &other) override { InitializeQueue(other.begin(), other.end()); }
-    void Extend(const List<T> &other) { InitializeQueue(other.begin(), other.end()); }
-    void Assign(std::initializer_list<T> &a) override
+
+    void Extend(const abstract_data_t<T>& other) override { InitializeQueue(other.begin(), other.end()); }
+    void Extend(const List<T>& other) { InitializeQueue(other.begin(), other.end()); }
+
+    void Assign(std::initializer_list<T>& a) override
     {
         Clear();
         InitializeQueue(a.begin(), a.end());
     }
+
     void Assign(Iter begin, Iter end)
     {
         Clear();
         InitializeQueue(begin, end);
     }
+
     void Assign(rIter begin, rIter end)
     {
         Clear();
         InitializeQueue(begin, end);
     }
-    void Assign(const size_t Size, const T &a)
+
+    void Assign(const size_t Size, const T& a)
     {
         Clear();
         for (size_t i = 0; i < Size; ++i)
             Push_back(a);
     }
 
-    static bool AreEqual(const List<T> &a, const List<T> &b)
+    static bool AreEqual(const List<T>& a, const List<T>& b)
     {
         if (a.Length() != b.Length())
             return false;
@@ -335,14 +263,16 @@ public:
                 return false;
         return true;
     }
-    Iter Find(const T &elem) override
+
+    Iter Find(const T& elem) override
     {
         for (auto it = this->begin(); it != this->end(); ++it)
             if (*it == elem)
                 return it;
         return this->end();
     }
-    Iter Insert(Iter iter, const T &elem) override
+
+    Iter Insert(Iter iter, const T& elem) override
     {
         Iter tmpIter(nullptr);
         auto newNode = new Node<T>(elem);
@@ -374,6 +304,7 @@ public:
 
         return tmpIter;
     }
+
     Iter Erase(Iter iter) override
     {
         Iter tmpIter(nullptr);
@@ -398,6 +329,7 @@ public:
         }
         return tmpIter;
     }
+
     void Clear() override
     {
         for (size_t i = size; i > 0; i--)
@@ -405,13 +337,22 @@ public:
     }
 
     // List Operators
-    friend bool operator==(const List &a, const List &b) { return a.size == b.size && std::equal(a.begin(), a.end(), b.begin()); }
-    friend bool operator<(const List &a, const List &b) { return std::lexicographical_compare(a.begin(), a.end(), b.begin(), b.end()) || a.size < b.size; }
-    friend bool operator!=(const List &a, const List &b) { return !(a == b); }
-    friend bool operator>(const List &a, const List &b) { return b < a; }
-    friend bool operator<=(const List &a, const List &b) { return !(b < a); }
-    friend bool operator>=(const List &a, const List &b) { return !(a < b); }
-    friend std::istream &operator>>(std::istream &input, List &list)
+    friend bool operator==(const List& a, const List& b)
+    {
+        return a.size == b.size && std::equal(a.begin(), a.end(), b.begin());
+    }
+
+    friend bool operator<(const List& a, const List& b)
+    {
+        return std::lexicographical_compare(a.begin(), a.end(), b.begin(), b.end()) || a.size < b.size;
+    }
+
+    friend bool operator!=(const List& a, const List& b) { return !(a == b); }
+    friend bool operator>(const List& a, const List& b) { return b < a; }
+    friend bool operator<=(const List& a, const List& b) { return !(b < a); }
+    friend bool operator>=(const List& a, const List& b) { return !(a < b); }
+
+    friend std::istream& operator>>(std::istream& input, List& list)
     {
         T value;
         size_t i = 0;
@@ -419,13 +360,15 @@ public:
             list[i++] = value;
         return input;
     }
-    friend std::ostream &operator<<(std::ostream &output, const List<T> &list)
+
+    friend std::ostream& operator<<(std::ostream& output, const List<T>& list)
     {
-        for (const auto &element : list)
+        for (const auto& element : list)
             output << element << " ";
         return output;
     }
-    List<T> &operator=(const List<T> &other)
+
+    List<T>& operator=(const List<T>& other)
     {
         if (this != &other)
         {
@@ -434,9 +377,10 @@ public:
         }
         return *this;
     }
-    friend bool operator==(const T &value, const rIter &iter) { return value == *iter; }
-    
-    T &operator[](size_t index) override
+
+    friend bool operator==(const T& value, const rIter& iter) { return value == *iter; }
+
+    T& operator[](size_t index) override
     {
         if (index >= size)
             throw std::out_of_range("Index out of range");
@@ -452,20 +396,43 @@ template <typename T, typename container = List<T>>
 class Queue
 {
 private:
-    using Iter = Iterator<T>;   
+    using Iter = Iterator<T>;
     using rIter = rIterator<T>;
 
     container list; // Объект списка внутри класса Queue
 public:
     // Constructors
-    Queue() : list() {}
-    Queue(const T a[], size_t size) : list(a, size) {}
-    Queue(size_t size) : list(size) {}
-    Queue(const Queue &b) : list(b.list) {}
-    Queue(Iter begin, Iter end) : list(begin, end) {}
-    Queue(rIter rbegin, rIter rend) : list(rbegin, rend) {}
-    Queue(std::initializer_list<T> a) : list(a) {}
-    Queue(const T a[]) : list(a, strlen(a) + 1) {}
+    Queue() : list()
+    {
+    }
+
+    Queue(const T a[], size_t size) : list(a, size)
+    {
+    }
+
+    Queue(size_t size) : list(size)
+    {
+    }
+
+    Queue(const Queue& b) : list(b.list)
+    {
+    }
+
+    Queue(Iter begin, Iter end) : list(begin, end)
+    {
+    }
+
+    Queue(rIter rbegin, rIter rend) : list(rbegin, rend)
+    {
+    }
+
+    Queue(std::initializer_list<T> a) : list(a)
+    {
+    }
+
+    Queue(const T a[]) : list(a, strlen(a) + 1)
+    {
+    }
 
     // Destructor
     ~Queue() { list.Clear(); }
@@ -477,14 +444,14 @@ public:
     rIter rend() const { return list.rend(); }
 
     // Queue Functions
-    void Push(const T &a) { list.Push_back(a); }
+    void Push(const T& a) { list.Push_back(a); }
     T Pop() { return list.Pop_front(); }
-    T &Front() { return list.Front(); }
-    T &Back() { return list.Back(); }
-    const T &Front() const { return list.Front(); }
-    const T &Back() const { return list.Back(); }
+    T& Front() { return list.Front(); }
+    T& Back() { return list.Back(); }
+    const T& Front() const { return list.Front(); }
+    const T& Back() const { return list.Back(); }
     bool Empty() const { return list.Empty(); }
     size_t Count() const { return list.Length(); }
     void Clear() { list.Clear(); }
-    void Swap(Queue<T> &a) { list.Swap(a.list); }
+    void Swap(Queue<T>& a) { list.Swap(a.list); }
 };

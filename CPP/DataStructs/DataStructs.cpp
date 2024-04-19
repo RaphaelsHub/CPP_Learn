@@ -1,7 +1,7 @@
 #include<iostream>
 #include "Structs/Deque.h"
 #include "Structs/Queue.h"
-#include "Structs/List.h"
+#include "Structs/ListBI.h"
 #include "Structs/ForwardList.h"
 #include "Structs/Stack.h"
 #include "Structs/Map.h"
@@ -16,9 +16,16 @@
 
 int main(int argc, char* argv[])
 {
-    Array<int> a = {1, 2, 3, 4, 5};
-    Vector<int> vec = {1, 2, 3, 4, 5};
-    Queue<int> qu = {1,2,3,4,5};
+    Array<int> array = {1, 2, 3, 4, 5};
+    Vector<int> vector = {1, 2, 3, 4, 5};
+    Queue<int> queue = {1, 2, 3, 4, 5};
+    ListBI<int> list = {1, 2, 3, 4, 5};
+    Stack<int> stack = {1,2,3,4,5};
+    ForwardList<int> forward_list = {1 ,2 ,3 ,4, 5};
+
+    
+
+
     
     return 0;
 }

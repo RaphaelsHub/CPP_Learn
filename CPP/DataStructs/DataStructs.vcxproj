@@ -162,7 +162,7 @@
     <ClInclude Include="Structs\Deque.h" />
     <ClInclude Include="Structs\ForwardList.h" />
     <ClInclude Include="Structs\HashTable.h" />
-    <ClInclude Include="Structs\List.h" />
+    <ClInclude Include="Structs\ListBI.h" />
     <ClInclude Include="Structs\Map.h" />
     <ClInclude Include="Structs\PriorityQueue.h" />
     <ClInclude Include="Structs\Queue.h" />
@@ -171,6 +171,9 @@
     <ClInclude Include="Structs\Stack.h" />
     <ClInclude Include="Structs\StaticArray.h" />
     <ClInclude Include="Structs\Vector.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Structs\IteratrorRiterator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
