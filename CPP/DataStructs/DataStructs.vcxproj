@@ -155,20 +155,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DataStructs.cpp" />
-    <ClCompile Include="Structs\AVL.cpp" />
-    <ClCompile Include="Structs\BinaryTry.cpp" />
-    <ClCompile Include="Structs\Deque.cpp" />
-    <ClCompile Include="Structs\ForwardList.cpp" />
-    <ClCompile Include="Structs\HashTable.cpp" />
-    <ClCompile Include="Structs\List.cpp" />
-    <ClCompile Include="Structs\Map.cpp" />
-    <ClCompile Include="Structs\PriorityQueue.cpp" />
-    <ClCompile Include="Structs\Queue.cpp" />
-    <ClCompile Include="Structs\RBT.cpp" />
-    <ClCompile Include="Structs\Set.cpp" />
-    <ClCompile Include="Structs\Stack.cpp" />
-    <ClCompile Include="Structs\StaticArray.cpp" />
-    <ClCompile Include="Structs\Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Structs\AVL.h" />
