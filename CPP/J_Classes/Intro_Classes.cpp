@@ -5,6 +5,7 @@
 #include "OOP/NameSpace.h"
 #include "OOP/ConstMethod.h"
 #include "OOP/Lib.h"
+#include <vector>
 
 int main()
 {

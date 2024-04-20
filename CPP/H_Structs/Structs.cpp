@@ -1,7 +1,20 @@
 #include <string>
 #include <iostream>
-#include "enum.h"
 
+enum valute {euro = 20, dollor=18, leuRoman = 4};
+
+void CheckForStatus(valute status)
+{
+    switch(status) 
+    {
+    case euro: std::cout << "euro";
+        break;
+    case dollor: std::cout<<R"(dollar)";
+        break;
+    case leuRoman: std::cout<<"leu roman";
+        break;
+    }
+}
 struct Location
 {
     int postCardIndex=0;

@@ -15,6 +15,6 @@ int main()
     int nums3[10] = {2,6,8,2,3,5,7,8,5,2};
     CountingSort(nums3,10);
     int nums4[10] = {2,6,8,2,3,5,7,8,5,2};
-    MergeSort(nums4,0,9);
+    //MergeSort(nums4,0,9);
 
 }
