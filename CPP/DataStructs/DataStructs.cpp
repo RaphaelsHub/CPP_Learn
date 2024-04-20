@@ -28,5 +28,11 @@ int main(int argc, char* argv[])
     binary_try<int>();
     std::vector<int> Date = {16, 54, 33, 34, 17, 19, 90, 2, 44, 32};
     PriorityQueue Heap(Date);
+    Map<int, int> a;
+    a.insert(1,4);
+    Set<int> b;
+    b.add(1);
+    AVLTree<int>avl ;
+    RBT<int>rbt;
     return 0;
 }
