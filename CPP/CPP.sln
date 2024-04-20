@@ -1,32 +1,32 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Intro_Variables", "Intro_Variables.vcxproj", "{322CC6BB-6279-4B94-9635-66C1C6CE4927}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "A_Variables", "A_Variables.vcxproj", "{322CC6BB-6279-4B94-9635-66C1C6CE4927}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Intro_Conditions", "Intro_Conditions\Intro_Conditions.vcxproj", "{85C3FAA7-5017-4CA4-9AE0-F1CDD865C2BF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "B_Conditions", "B_Conditions\B_Conditions.vcxproj", "{85C3FAA7-5017-4CA4-9AE0-F1CDD865C2BF}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Intro_Loops", "Intro_Loops\Intro_Loops.vcxproj", "{4A92124D-7F49-49E0-8037-A4E38C80F5E7}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "C_Loops", "C_Loops\C_Loops.vcxproj", "{4A92124D-7F49-49E0-8037-A4E38C80F5E7}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MathPazles", "MathPazles\MathPazles.vcxproj", "{83728050-FE93-44F0-A533-7582BA46A772}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "I_MathPazles", "I_MathPazles\I_MathPazles.vcxproj", "{83728050-FE93-44F0-A533-7582BA46A772}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Directives", "Directives\Directives.vcxproj", "{F28A5436-37AE-491F-82E4-BC46BD90C5F3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "F_Directives", "F_Directives\F_Directives.vcxproj", "{F28A5436-37AE-491F-82E4-BC46BD90C5F3}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Functions", "Functions\Functions.vcxproj", "{0A4921F1-F939-4E76-89A5-DEE79B0FFBF2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "E_Functions", "E_Functions\E_Functions.vcxproj", "{0A4921F1-F939-4E76-89A5-DEE79B0FFBF2}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pointers", "Pointers\Pointers.vcxproj", "{98F9ACFB-4AC6-4981-9607-B3D58E0E4B3D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "G_Pointers", "G_Pointers\G_Pointers.vcxproj", "{98F9ACFB-4AC6-4981-9607-B3D58E0E4B3D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Array", "Array\Array.vcxproj", "{AA532C82-A783-427C-941E-18A2D06C0AF3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "D_Array", "D_Array\D_Array.vcxproj", "{AA532C82-A783-427C-941E-18A2D06C0AF3}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Structs", "Structs\Structs.vcxproj", "{7772D9EE-23B9-43FE-86FD-40AC3DC84DB0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "H_Structs", "H_Structs\H_Structs.vcxproj", "{7772D9EE-23B9-43FE-86FD-40AC3DC84DB0}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SortAlg", "SortAlg\SortAlg.vcxproj", "{EEB98ED2-1915-4476-8B66-21061388635F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "L_SortAlg", "L_SortAlg\L_SortAlg.vcxproj", "{EEB98ED2-1915-4476-8B66-21061388635F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Intro_Classes", "Intro_Classes\Intro_Classes.vcxproj", "{E8B6B687-271F-4731-874C-B57AF69143F6}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "J_Classes", "J_Classes\J_Classes.vcxproj", "{E8B6B687-271F-4731-874C-B57AF69143F6}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Files", "Files\Files.vcxproj", "{D0CBDA02-B815-43E5-BF1A-2C646F6CC72E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "K_Files", "K_Files\K_Files.vcxproj", "{D0CBDA02-B815-43E5-BF1A-2C646F6CC72E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SearchWay", "SearchWay\SearchWay.vcxproj", "{3BF79A09-6F36-46C9-B150-CF3F09A431E3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "N_SearchWay", "N_SearchWay\N_SearchWay.vcxproj", "{3BF79A09-6F36-46C9-B150-CF3F09A431E3}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataStructs", "DataStructs\DataStructs.vcxproj", "{2FF831BC-EF63-4CE6-A539-B279662B5BC0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "M_DataStructs", "M_DataStructs\M_DataStructs.vcxproj", "{2FF831BC-EF63-4CE6-A539-B279662B5BC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
