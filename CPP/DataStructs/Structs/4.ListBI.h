@@ -1,6 +1,6 @@
 #pragma once
 
-#include "IteratrorRiterator.h"
+#include "15.IteratrorRiterator.h"
 
 TEMPLATE_T
 class ListBI
@@ -28,14 +28,14 @@ public:
     ListBI(size_t size) : ListBI()
     {
         for (size_t i = 0; i < size; ++i)
-            List<T>::Push_back(T());
+            ListBI<T>::Push_back(T());
     }
     ListBI(const T a[], const size_t _size) : ListBI()
     {
         for (size_t i = 0; i < _size; ++i)
-            List<T>::Push_back(a[i]);
+            ListBI<T>::Push_back(a[i]);
     }
-    ListBI(const List<T>& b) : ListBI() { InitializeQueue(b.begin(), b.end()); }
+    ListBI(const ListBI<T>& b) : ListBI() { InitializeQueue(b.begin(), b.end()); }
     ListBI(const Iter& begin, const Iter& end) : ListBI() { InitializeQueue(begin, end); }
     ListBI(const rIter& begin, const rIter& end) : ListBI() { InitializeQueue(begin, end); }
     ListBI(std::initializer_list<T> a) : ListBI() { InitializeQueue(a.begin(), a.end()); }

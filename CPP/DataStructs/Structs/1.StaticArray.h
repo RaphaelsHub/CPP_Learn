@@ -79,7 +79,7 @@ public:
     }
     rIteratorArr<T> &operator++(T)
     {
-        rIterator tmp = *this;
+        rIteratorArr tmp = *this;
         IteratorArr<T>::data = this->data++;
         return tmp;
     }
@@ -90,7 +90,7 @@ class Array
 {
 private:
     using Iter = IteratorArr<T>;
-    using rIter = rIterator<T>;
+    using rIter = rIteratorArr<T>;
 
     T* arr = nullptr;
     size_t count = 0;
