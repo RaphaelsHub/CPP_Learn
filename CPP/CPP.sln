@@ -28,6 +28,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "N_SearchWay", "N_SearchWay\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "M_DataStructs", "M_DataStructs\M_DataStructs.vcxproj", "{2FF831BC-EF63-4CE6-A539-B279662B5BC0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "O_Propability", "O_Propability\O_Propability.vcxproj", "{CC923DA1-0DE8-4038-BA34-ACD4A5FD4ADE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "P_UniversityProgramming", "P_UniversityProgramming\P_UniversityProgramming.vcxproj", "{F862A030-B205-4455-AE72-552EDE806306}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -148,5 +152,21 @@ Global
 		{2FF831BC-EF63-4CE6-A539-B279662B5BC0}.Release|Win32.Build.0 = Release|Win32
 		{2FF831BC-EF63-4CE6-A539-B279662B5BC0}.Release|x64.ActiveCfg = Release|x64
 		{2FF831BC-EF63-4CE6-A539-B279662B5BC0}.Release|x64.Build.0 = Release|x64
+		{CC923DA1-0DE8-4038-BA34-ACD4A5FD4ADE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CC923DA1-0DE8-4038-BA34-ACD4A5FD4ADE}.Debug|Win32.Build.0 = Debug|Win32
+		{CC923DA1-0DE8-4038-BA34-ACD4A5FD4ADE}.Debug|x64.ActiveCfg = Debug|x64
+		{CC923DA1-0DE8-4038-BA34-ACD4A5FD4ADE}.Debug|x64.Build.0 = Debug|x64
+		{CC923DA1-0DE8-4038-BA34-ACD4A5FD4ADE}.Release|Win32.ActiveCfg = Release|Win32
+		{CC923DA1-0DE8-4038-BA34-ACD4A5FD4ADE}.Release|Win32.Build.0 = Release|Win32
+		{CC923DA1-0DE8-4038-BA34-ACD4A5FD4ADE}.Release|x64.ActiveCfg = Release|x64
+		{CC923DA1-0DE8-4038-BA34-ACD4A5FD4ADE}.Release|x64.Build.0 = Release|x64
+		{F862A030-B205-4455-AE72-552EDE806306}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F862A030-B205-4455-AE72-552EDE806306}.Debug|Win32.Build.0 = Debug|Win32
+		{F862A030-B205-4455-AE72-552EDE806306}.Debug|x64.ActiveCfg = Debug|x64
+		{F862A030-B205-4455-AE72-552EDE806306}.Debug|x64.Build.0 = Debug|x64
+		{F862A030-B205-4455-AE72-552EDE806306}.Release|Win32.ActiveCfg = Release|Win32
+		{F862A030-B205-4455-AE72-552EDE806306}.Release|Win32.Build.0 = Release|Win32
+		{F862A030-B205-4455-AE72-552EDE806306}.Release|x64.ActiveCfg = Release|x64
+		{F862A030-B205-4455-AE72-552EDE806306}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 EndGlobal
